@@ -74,7 +74,10 @@ public class IngredientTray implements IngredientTrayInterface {
 
     @Override
     public void displayIngredients() {
-        System.out.println("TRAY ITEMS : \n");
+        System.out.println("\n--------------------------------");
+        System.out.println("TRAY ITEMS : ");
+        System.out.println("--------------------------------");
+
         for (Map.Entry<Ingredient, Measurement>  i: ingredientTrayItems.entrySet()) {
             Measurement measurement = i.getValue();
             String message = String.format("%s - %d %s", i.getKey().getName(), measurement.getQuantity(), measurement.getUnit());
@@ -82,6 +85,7 @@ public class IngredientTray implements IngredientTrayInterface {
                 message += " - RUNNING LOW";
             System.out.println(message);
         }
+        System.out.println("--------------------------------\n");
     }
 
     public boolean isIngredientLow(Ingredient ingredient, Measurement measurement) {

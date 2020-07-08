@@ -55,6 +55,8 @@ public class CoffeeMachine implements CoffeeMachineInterface {
                 }
                 if(canPrepare)
                     queue.put(order);
+                if(tray.isAnyIngredientLow())
+                    tray.displayIngredients();
             } else if(order.isDummy())
                 queue.put(order);
             else
