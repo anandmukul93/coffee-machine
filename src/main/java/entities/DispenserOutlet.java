@@ -20,12 +20,12 @@ public abstract class DispenserOutlet extends Thread{
         this.serving = serving;
         Measurement measurement = serving.getMeasurement();
         System.out.println(String.format("Pouring item : %s - %d %s", serving.getItem().getDisplayName(), serving.getMeasurement().getQuantity(), serving.getMeasurement().getUnit().getNotation()));
-        try {
-            // dispensing simulation
-            Thread.sleep(measurement.getQuantity() * 10);
-        } catch (InterruptedException e) {
-            System.out.println("Served : " + serving.getItem().getDisplayName());
-        }
+//        try {
+//            // dispensing simulation
+//            Thread.sleep(measurement.getQuantity() * 10);
+//        } catch (InterruptedException e) {
+//            System.out.println("Served : " + serving.getItem().getDisplayName());
+//        }
         this.occupied = false;
         this.serving = null;
     }
