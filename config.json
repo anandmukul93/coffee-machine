@@ -1,0 +1,90 @@
+{
+    "outlets": 3,
+    "orderQueueSize": 1,
+    "menu": {
+        "menuItems": [
+            "GINGER_TEA",
+            "BLACK_TEA",
+            "GREEN_TEA",
+            "HOT_WATER",
+            "HOT_TEA",
+            "HOT_COFFEE",
+            "HOT_MILK",
+            "BLACK_COFFEE"
+        ]
+    },
+    "cookbook": {
+        "recipes": {
+            "GINGER_TEA": {},
+            "BLACK_TEA": {},
+            "GREEN_TEA": {},
+            "HOT_WATER": {},
+            "HOT_TEA": {},
+            "HOT_COFFEE": {},
+            "HOT_MILK": {},
+            "BLACK_COFFEE": {}
+        }
+    },
+    "tray": {
+        "ingredientTrayItems": {
+            "HOT_MILK": {
+                "quantity": 1000,
+                "unit": "MILLILITRE"
+            },
+            "GINGER_SYRUP": {
+                "quantity": 150,
+                "unit": "MILLILITRE"
+            },
+            "SUGAR_SYRUP": {
+                "quantity": 150,
+                "unit": "MILLILITRE"
+            },
+            "TEA_LEAVES_SYRUP": {
+                "quantity": 100,
+                "unit": "MILLILITRE"
+            },
+            "HOT_WATER": {
+                "quantity": 300,
+                "unit": "MILLILITRE"
+            },
+            "GREEN_MIXTURE": {
+                "quantity": 100,
+                "unit": "GRAM"
+            },
+            "GROUND_COFFEE": {
+                "quantity": 10,
+                "unit": "GRAM"
+            }
+        },
+        "lowLimits": {
+            "HOT_MILK": {
+                "quantity": 100,
+                "unit": "MILLILITRE"
+            },
+            "GINGER_SYRUP": {
+                "quantity": 20,
+                "unit": "MILLILITRE"
+            },
+            "SUGAR_SYRUP": {
+                "quantity": 20,
+                "unit": "MILLILITRE"
+            },
+            "TEA_LEAVES_SYRUP": {
+                "quantity": 20,
+                "unit": "MILLILITRE"
+            },
+            "HOT_WATER": {
+                "quantity": 200,
+                "unit": "MILLILITRE"
+            },
+            "GREEN_MIXTURE": {
+                "quantity": 50,
+                "unit": "GRAM"
+            },
+            "GROUND_COFFEE": {
+                "quantity": 10,
+                "unit": "GRAM"
+            }
+        }
+    }
+}

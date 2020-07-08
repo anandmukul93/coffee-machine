@@ -1,0 +1,118 @@
+{
+    "HOT_TEA": {
+        "HOT_WATER": {
+            "quantity": 100,
+            "unit": "MILLILITRE"
+        },
+        "HOT_MILK": {
+            "quantity": 100,
+            "unit": "MILLILITRE"
+        },
+        "GINGER_SYRUP": {
+            "quantity": 20,
+            "unit": "MILLILITRE"
+        },
+        "SUGAR_SYRUP": {
+            "quantity": 50,
+            "unit": "MILLILITRE"
+        },
+        "TEA_LEAVES_SYRUP": {
+            "quantity": 20,
+            "unit": "MILLILITRE"
+        }
+    },
+    "HOT_COFFEE": {
+        "HOT_WATER": {
+            "quantity": 200,
+            "unit": "MILLILITRE"
+        },
+        "GINGER_SYRUP": {
+            "quantity": 20,
+            "unit": "MILLILITRE"
+        },
+        "HOT_MILK": {
+            "quantity": 300,
+            "unit": "MILLILITRE"
+        },
+        "SUGAR_SYRUP": {
+            "quantity": 30,
+            "unit": "MILLILITRE"
+        },
+        "TEA_LEAVES_SYRUP": {
+            "quantity": 40,
+            "unit": "MILLILITRE"
+        }
+    },
+    "BLACK_TEA": {
+        "HOT_WATER": {
+            "quantity": 100,
+            "unit": "MILLILITRE"
+        },
+        "GINGER_SYRUP": {
+            "quantity": 40,
+            "unit": "MILLILITRE"
+        },
+        "SUGAR_SYRUP": {
+            "quantity": 20,
+            "unit": "MILLILITRE"
+        },
+        "TEA_LEAVES_SYRUP": {
+            "quantity": 30,
+            "unit": "MILLILITRE"
+        }
+    },
+    "GREEN_TEA": {
+        "GINGER_SYRUP": {
+            "quantity": 30,
+            "unit": "MILLILITRE"
+        },
+        "SUGAR_SYRUP": {
+            "quantity": 50,
+            "unit": "MILLILITRE"
+        },
+        "GREEN_MIXTURE": {
+            "quantity": 40,
+            "unit": "GRAM"
+        }
+    },
+    "HOT_MILK": {
+        "HOT_MILK": {
+            "quantity": 400,
+            "unit": "MILLILITRE"
+        },
+        "GINGER_SYRUP": {
+            "quantity": 30,
+            "unit": "MILLILITRE"
+        },
+        "SUGAR_SYRUP": {
+            "quantity": 50,
+            "unit": "MILLILITRE"
+        },
+        "GREEN_MIXTURE": {
+            "quantity": 60,
+            "unit": "GRAM"
+        }
+    },
+    "BLACK_COFFEE": {
+        "HOT_MILK": {
+            "quantity": 200,
+            "unit": "MILLILITRE"
+        },
+        "GINGER_SYRUP": {
+            "quantity": 40,
+            "unit": "MILLILITRE"
+        },
+        "SUGAR_SYRUP": {
+            "quantity": 30,
+            "unit": "MILLILITRE"
+        },
+        "GREEN_MIXTURE": {
+            "quantity": 40,
+            "unit": "GRAM"
+        },
+        "GROUND_COFFEE": {
+            "quantity": 30,
+            "unit": "GRAM"
+        }
+    }
+}
