@@ -9,9 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-import org.mockito.invocation.InvocationOnMock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.mockito.stubbing.Answer;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -21,7 +19,7 @@ import java.util.stream.Collectors;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.StringContains.containsStringIgnoringCase;
-import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -31,7 +29,7 @@ public class CoffeeMachineTests {
     private static final PrintStream originalOut = System.out;
     private static final PrintStream originalErr = System.err;
 
-    InputProviderConcrete<Order> inputProvider = Mockito.mock(InputProviderConcrete.class);
+    InputProviderConcrete<Order> inputProvider = Mockito.spy(new InputProviderConcrete<>());
 
     @BeforeClass
     public static void setupStreams() {
@@ -430,7 +428,7 @@ public class CoffeeMachineTests {
                 "HOT MILK could not be prepared because SUGAR SYRUP is not sufficient",
                 "Pouring item : HOT COFFEE",
                 "BLACK COFFEE could not be prepared because GROUND COFFEE is not sufficient",
-                "Pouring item : HOT TEA",
+                "Pouring item : HOt TEA",
                 "Pouring item : GREEN TEA");
 
         testCase(configJson, ordersJson, outputs);
@@ -441,26 +439,10 @@ public class CoffeeMachineTests {
             CoffeeMachineRunner machineRunner = new CoffeeMachineRunner();
             when(inputProvider.getConfigInput()).thenReturn(config);
             List<Order> orderList = getOrderFromJson(orders);
-            Iterator<Order> it = orderList.iterator();
-            Answer<Boolean> hasNextAnswer = new Answer<Boolean>() {
-                private Iterator<Order> iterator = it;
+            final Iterator<Order> it = orderList.iterator();
 
-                @Override
-                public Boolean answer(InvocationOnMock invocation) throws Throwable {
-                    return iterator.hasNext();
-                }
-            };
-
-            Answer<Order> getNextAnswer = new Answer<Order>() {
-                private Iterator<Order> iterator = it;
-
-                @Override
-                public Order answer(InvocationOnMock invocation) throws Throwable {
-                    return iterator.next();
-                }
-            };
-            when(inputProvider.hasNextInput()).then(hasNextAnswer);
-            when(inputProvider.getNextInput()).then(getNextAnswer);
+            doAnswer(invocation -> it.hasNext()).when(inputProvider).hasNextInput();
+            doAnswer(invocation -> it.next()).when(inputProvider).getNextInput();
             machineRunner.simulate(inputProvider);
             assertStringIn(outputs, outContent.toString());
     }
